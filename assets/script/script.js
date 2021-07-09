@@ -1,12 +1,20 @@
 Vue.component('postagem', {
     data: function(){
         return {
-            n: 10
+            n: 10,
+            commentList: ['Incrivel!', 'Ual'],
+            comentario: '',
+            comentar: false
         }
     },
     methods: {
-        responder: function(){
-            this.$emit('responder', this.titulo)
+        add: function(){
+            this.commentList.push(this.comentario)
+            this.comentario = ''
+            this.comentar = false
+        },
+        openComment: function(){
+            this.comentar = true
         }
     },
     props: [ 'titulo' ],
@@ -20,27 +28,34 @@ Vue.component('postagem', {
             </small>
             <div class="buttons">
                 <i class="far fa-heart" @click="n++"></i>
-                <i class="far fa-comment" @click="responder"></i>
+                <i class="far fa-comment" @click="openComment"></i>
             </div>
         </div>
-        <hr/>
+        <div class="comments-area">
+            <ul>
+                <li v-for="item in commentList">
+                    {{ item }}
+                </li>
+            </ul>
+            <input type="text" placeholder="Adicione um comentario" v-model="comentario" @keyup.enter="add" v-if="comentar">
+        </div>
     </div>
     `
 })
 
 
 
-let app = new Vue ({
-    el:'#app',
+
+
+
+
+let appFeed = new Vue ({
+    el:'#app-feed',
     data: {
-        responderPost: false,
-        nomePost: ''
+        
     },
-    methods:
-    {
-        abrirResposta: function(titulo){
-            this.responderPost = true;
-            this.nomePost = titulo
-        }
+    methods: {
+        
     }
+
 })

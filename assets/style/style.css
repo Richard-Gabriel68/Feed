@@ -7,29 +7,27 @@ body {
     background-image: linear-gradient(90deg, rgb(201, 142, 142), rgb(162, 168, 124), rgb(138, 104, 151));
     
 }
-#app {
-    width: 70vw;
+
+/* LEFT SIDE --------------------*/
+
+#app-feed {
+    width: 35vw;
     height: 80vh;
     margin: auto;
     margin-top: 2rem;
     display: flex;
-}
-
-/* LEFT SIDE --------------------*/
-
-.leftSide {
-    flex: 1;
+    flex-direction: column;
     background-color: #fff;
     overflow-y: auto;
 }
-.leftSide h1 {
+#app-feed h1 {
     text-align: center;
     margin: 1rem 0;
 }
-.leftSide img {
+#app-feed img {
     width: 100%;
 }
-.leftSide .buttons-area {
+#app-feed .buttons-area {
     width: 95%;
     margin: 1rem auto;
     display: flex;
@@ -37,33 +35,32 @@ body {
     justify-content: space-between;
     font-size: 20px;
 }
-.leftSide .buttons-area .buttons i {
+#app-feed .buttons-area .buttons i {
     margin: 0 0.5rem;
     cursor: pointer;
 }
-/* RIGHT SIDE --------------------*/
+#app-feed ul, li {
+    list-style: none;
+}
+#app-feed li {
+    margin-left: 1rem;
+    font-size: 13px;
 
-.rightSide {
-    flex: 1;
-    background-color: #ccc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-.rightSide p {
-    text-align: center;
-    margin: 1rem;
-}
-.rightSide textarea {
-    margin: auto;
+#app-feed input {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
     width: 70%;
-    height: 150px;
+    background-color: #ccc;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
 }
 
 /* RESPONSIVDADE --------------------- */
 
 @media(max-width: 550px) {
-    #app {
+    #app-feed {
         margin-top: 0;
         width: 100vw;
         height: auto;

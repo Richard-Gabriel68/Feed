@@ -9,34 +9,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-
-        <div class="leftSide">
+    <div id="app-feed">
             
-            <postagem titulo="Olha meu novo bichinho!" @responder="abrirResposta">
-                <img src="assets/img/camaleaop.jpg" alt="">
-            </postagem>
+        <postagem titulo="Olha meu novo bichinho!">
+            <img src="assets/img/camaleaop.jpg" alt="">
+        </postagem>
 
-            <postagem titulo="Como ceis tão?" @responder="abrirResposta">
-                <img src="assets/img/camaleaop.jpg" alt="">
-            </postagem>
+        <postagem titulo="Como ceis tão?">
+            <img src="assets/img/camaleaop.jpg" alt="">
+        </postagem>
 
-            <postagem titulo="Bom diaaa" @responder="abrirResposta">
-                <img src="assets/img/camaleaop.jpg" alt="">
-            </postagem>
-
-        </div>
-
-        <div class="rightSide">
-
-            <div v-if="responderPost">
-                <p>Respondendo post <strong> " {{ nomePost }}"</strong></p>
-                <textarea ></textarea>
-            </div>
+        <postagem titulo="Bom diaaa">
+            <img src="assets/img/camaleaop.jpg" alt="" >
+        </postagem>
 
         </div>
-
     </div>
+
+    
+    
+    <!--
+        
+        <button @click="enviar">Add</button>
+
+    -->
+    
+
+    
 
     <script src="assets/script/script.js"></script>
 </body>
