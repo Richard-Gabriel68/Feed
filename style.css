@@ -59,3 +59,14 @@ body {
     width: 70%;
     height: 150px;
 }
+
+/* RESPONSIVDADE --------------------- */
+
+@media(max-width: 400px) {
+    #app {
+        margin-top: 0;
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+}
