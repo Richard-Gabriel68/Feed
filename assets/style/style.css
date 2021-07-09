@@ -62,7 +62,7 @@ body {
 
 /* RESPONSIVDADE --------------------- */
 
-@media(max-width: 400px) {
+@media(max-width: 550px) {
     #app {
         margin-top: 0;
         width: 100vw;
