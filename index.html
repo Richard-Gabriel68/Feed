@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js"></script>
+    <script src="https://kit.fontawesome.com/557a9eecff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <div class="leftSide">
+            
+            <postagem titulo="Olha meu novo bichinho!" @responder="abrirResposta">
+                <img src="img/camaleaop.jpg" alt="">
+            </postagem>
+
+            <postagem titulo="Como ceis tão?" @responder="abrirResposta">
+                <img src="img/camaleaop.jpg" alt="">
+            </postagem>
+
+            <postagem titulo="Bom diaaa" @responder="abrirResposta">
+                <img src="img/camaleaop.jpg" alt="">
+            </postagem>
+
+        </div>
+
+        <div class="rightSide">
+
+            <div v-if="responderPost">
+                <p>Respondendo post <strong> " {{ nomePost }}"</strong></p>
+                <textarea ></textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
