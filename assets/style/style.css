@@ -22,8 +22,8 @@ body {
 }
 #app-feed header {
     width: 100%;
-    height: 25px;
-    background-color: #ccc;
+    height: 40px;
+    background-image: linear-gradient(45deg, rgb(252, 255, 104), rgb(96, 172, 190), rgb(0, 255, 179));
 }
 #app-feed h1 {
     text-align: center;
@@ -43,6 +43,11 @@ body {
 #app-feed .buttons-area .buttons i {
     margin: 0 0.5rem;
     cursor: pointer;
+}
+#app-feed .buttons-area .buttons .um {
+    background-color: rgb(167, 104, 209);
+    padding: 7px;
+    border-radius: 50%;
 }
 #app-feed ul, li {
     list-style: none;

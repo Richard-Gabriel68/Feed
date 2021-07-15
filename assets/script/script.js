@@ -15,6 +15,9 @@ Vue.component('postagem', {
         },
         openComment: function(){
             this.comentar = true
+        },
+        curtir: function(){
+            this.n++
         }
     },
     props: [ 'titulo' ],
@@ -27,7 +30,7 @@ Vue.component('postagem', {
                 <strong> {{ n }} curtidas </strong>
             </small>
             <div class="buttons">
-                <i class="far fa-heart" @click="n++"></i>
+                <i class="far fa-heart" @click.once="curtir"></i>
                 <i class="far fa-comment" @click="openComment"></i>
             </div>
         </div>
